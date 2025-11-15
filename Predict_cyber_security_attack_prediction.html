@@ -1,0 +1,150 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-color:white;padding:50px;   }
+			#title{font-family: 'Fredoka One', cursive;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid yellowgreen;
+    width: 904px;
+    height: 202px;
+    overflow: scroll;
+    background-color:;
+}
+		.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style6 {
+	font-size: 18px;
+	color: #FFFF00;
+	font-weight: bold;
+}
+.style8 {color: #FFFF00; font-weight: bold; }
+        .style10 {font-size: 18px; color: #FF0000; font-weight: bold; }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+
+                   <form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1">PREDICTION OF <span class="style10">CYBER SECURITY ATTACK PREDICTION TYPE</span> !!! </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="568" align="center">
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter  Title</div></td>
+                                    <td><textarea name="Title" placeholder="Enter Title"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter  Date</div></td>
+                                    <td><textarea name="Date" placeholder="Enter Date"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="287" height="44" bgcolor="#FF0000"><div align="center" class="style8">
+                                      <div align="center">Enter Affiliations</div>
+                                    </div></td>
+                                    <td width="269"><textarea name="Affiliations" placeholder="Enter Affiliations"></textarea></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">
+                                      <div align="center">Enter Description</div>
+                                    </div></td>
+                                    <td><textarea name="Description" placeholder="Enter Description"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">
+                                      <div align="center">Enter Response</div>
+                                    </div></td>
+                                    <td><textarea name="Response" placeholder="Enter Response"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">
+                                      <div align="center">Enter Victims</div>
+                                    </div></td>
+                                    <td><textarea name="Victims" cols="20" placeholder="Enter Victims"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">
+                                      <div align="center">Enter Sponsor</div>
+                                    </div></td>
+                                    <td><textarea name="Sponsor" placeholder="Enter Sponsor"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">Enter Category</div></td>
+                                    <td><textarea name="Category" placeholder="Enter Category"></textarea></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="44" bgcolor="#FF0000"><div align="center" class="style8">
+                                      <div align="center">Enter Sources Of Attack</div>
+                                    </div></td>
+                                    <td><textarea name="Sources_Of_Attack" cols="30" rows="10" placeholder="Enter Sources Of Attack"></textarea></td>
+                                  </tr>
+  <td><p>&nbsp; </p>
+          <p>
+            <input name="submit" type="submit" class="style1" value="Predict">
+        </p></td>
+  </tr>
+                                </table>
+					 </fieldset>
+				  </form>
+
+
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+
+                            <hr>
+                            <div>
+                              <table border="0" align="center" >
+                                    <tr><td width="246" bgcolor="#FF0000"><div align="center"><span class="style6">CYBER SECURITY ATTACK PREDICTION TYPE</span> :: </div></td>
+
+
+
+                                      <td width="120" bgcolor="#FFFFFF" style="color:red; font-size:20px; font-family:fantasy" ><div align="center">{{objs}}</div></td></tr>
+                      </table>
+
+
+
+                            </div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>
